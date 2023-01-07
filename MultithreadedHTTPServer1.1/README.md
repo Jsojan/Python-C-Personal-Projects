@@ -2,7 +2,7 @@
 
 ## Short Description
 
-The server and audit log implemented from the previous implementations were utilized  which takes the HTTP server and allows for multithreading. Note that the log file will be specified as a command line argument when running the server with -l (name of logfile) and the threadcount for number of threads to concurrently run on the server using -t with a default thread count of 4 threads. If the logfile is not found, it will be created and set with the appropriate permissions for logging each request. Furthermore, the additional functionality of the regular server and audit log must function regardless of varying coherent operations which can easily be checked with the audit log.
+The server and audit log implemented from the previous implementations were utilized  which takes the HTTP 1.1 server and allows for multithreading. Note that the log file will be specified as a command line argument when running the server with -l (name of logfile) and the threadcount for number of threads to concurrently run on the server using -t with a default thread count of 4 threads. If the logfile is not found, it will be created and set with the appropriate permissions for logging each request. Furthermore, the additional functionality of the regular server and audit log must function regardless of varying coherent operations which can easily be checked with the audit log.
 
 ## Build
 
