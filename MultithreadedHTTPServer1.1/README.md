@@ -1,8 +1,8 @@
-## CSE 130 Assignment 4 - Multithreaded HTTP server
+## Multithreaded HTTP server
 
 ## Short Description
 
-In this assignment, the server and audit log implemented from the previous assignments were utilized in the final assignment which takes the HTTP server and allows for multithreading. Note that the log file will be specified as a command line argument when running the server with -l (name of logfile) and the threadcount for number of threads to concurrently run on the server using -t with a default thread count of 4 threads. If the logfile is not found, it will be created and set with the appropriate permissions for logging each request. Furthermore, the additional functionality of the regular server and audit log must function regardless of varying coherent operations which can easily be checked with the audit log.
+The server and audit log implemented from the previous implementations were utilized  which takes the HTTP server and allows for multithreading. Note that the log file will be specified as a command line argument when running the server with -l (name of logfile) and the threadcount for number of threads to concurrently run on the server using -t with a default thread count of 4 threads. If the logfile is not found, it will be created and set with the appropriate permissions for logging each request. Furthermore, the additional functionality of the regular server and audit log must function regardless of varying coherent operations which can easily be checked with the audit log.
 
 ## Build
 
@@ -23,11 +23,6 @@ The overall code structure for my assignment 4 follows modularization of many fu
 ## Design Choices
 
 Note, some interesting design choices that were made include ensuring mutlithreaded functionality such as using sig action instead of signal() and memcmp instead of strcmp as the thread safe versions of said functions. In addition, the choice to split up my code into several c and h files for modularization and better understanding of my code. Likewise, the threadsafe queue was included for adressing handling requests from the server and processing them into the correct responses and audit log. As such, the audit log will server as the form of validation for this server since it shows the history of responses sent by the program back to the client.
-
-## Credit
-
-Note, I did not attend any TA sections for this assignment since I did not need
-help with creating the audit log file as intended. However, I am citing the man pages which helped me with correctly using thread safe version of functions to be utilized in my multithreaded http server.
 
 ## Cleaning
 
